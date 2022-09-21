@@ -1,8 +1,16 @@
-import PropTypes from 'prop-types';
 import { StyledLabel, StyledInput } from 'components/Filter/Filter.styled';
 import { Box } from 'utils/Box';
+import { useSelector, useDispatch } from 'react-redux';
+import { filterValue } from 'redux/actions';
+import { getFilterValue } from 'redux/selectors';
 
-export const Filter = ({ filter, onChange }) => {
+export const Filter = () => {
+  const filter = useSelector(getFilterValue);
+  const dispatch = useDispatch();
+  const handleFilterChange = e => {
+    dispatch(filterValue(e.currentTarget.value));
+  };
+
   return (
     <Box mb={4} mt={4}>
       <StyledLabel>
@@ -14,14 +22,9 @@ export const Filter = ({ filter, onChange }) => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
           value={filter}
-          onChange={onChange}
+          onChange={handleFilterChange}
         />
       </StyledLabel>
     </Box>
   );
-};
-
-Filter.propTypes = {
-  filter: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
 };
