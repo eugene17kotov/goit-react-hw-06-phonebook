@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-import { deleteContact } from 'redux/reducer';
-// import { deleteContact } from 'redux/actions';
+// import { deleteContact } from 'redux/reducer';
+import { deleteContact } from 'redux/actions';
 
 import { Button } from 'components/Button/Button';
 

@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import { filterValue } from 'redux/reducer';
-// import { filterValue } from 'redux/actions';
+// import { filterValue } from 'redux/reducer';
+import { filterValue } from 'redux/actions';
 import { getFilterValue } from 'redux/selectors';
 
 import { StyledLabel, StyledInput } from 'components/Filter/Filter.styled';
