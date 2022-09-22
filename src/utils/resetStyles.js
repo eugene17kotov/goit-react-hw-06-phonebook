@@ -21,7 +21,6 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: linear-gradient( 109.6deg, rgba(110,123,251,1)  11.2%,  rgb(252, 178, 156) 91.1% );
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
