@@ -9,6 +9,8 @@
 
 import { createReducer } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 import { addContact, deleteContact, filterValue } from './actions';
 
@@ -32,3 +34,14 @@ export const contactsReducer = combineReducers({
   items: itemsReducer,
   filter: filterReducer,
 });
+
+const persistConfig = {
+  key: 'contacts',
+  storage,
+  whitelist: ['items'],
+};
+
+export const persistedContactsReducer = persistReducer(
+  persistConfig,
+  contactsReducer
+);
