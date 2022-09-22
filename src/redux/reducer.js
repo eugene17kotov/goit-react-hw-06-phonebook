@@ -1,12 +1,3 @@
-// const initialState = {};
-
-// export const rootReducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     default:
-//       return state;
-//   }
-// };
-
 import { createReducer } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
@@ -45,3 +36,14 @@ export const persistedContactsReducer = persistReducer(
   persistConfig,
   contactsReducer
 );
+
+// VANILLA REDUX
+
+// const initialState = {};
+
+// export const rootReducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     default:
+//       return state;
+//   }
+// };

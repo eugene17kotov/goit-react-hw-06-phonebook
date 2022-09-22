@@ -1,11 +1,3 @@
-// import { createStore } from 'redux';
-// import { devToolsEnhancer } from '@redux-devtools/extension';
-// import { rootReducer } from './reducer';
-
-// const enhancer = devToolsEnhancer();
-
-// export const store = createStore(rootReducer, enhancer);
-
 import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
@@ -30,3 +22,13 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
+
+// VANILLA REDUX
+
+// import { createStore } from 'redux';
+// import { devToolsEnhancer } from '@redux-devtools/extension';
+// import { rootReducer } from './reducer';
+
+// const enhancer = devToolsEnhancer();
+
+// export const store = createStore(rootReducer, enhancer);
