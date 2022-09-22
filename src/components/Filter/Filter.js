@@ -1,8 +1,11 @@
-import { StyledLabel, StyledInput } from 'components/Filter/Filter.styled';
-import { Box } from 'utils/Box';
 import { useSelector, useDispatch } from 'react-redux';
+
+// import { filterValue } from 'redux/reducer';
 import { filterValue } from 'redux/actions';
 import { getFilterValue } from 'redux/selectors';
+
+import { StyledLabel, StyledInput } from 'components/Filter/Filter.styled';
+import { Box } from 'utils/Box';
 
 export const Filter = () => {
   const filter = useSelector(getFilterValue);
